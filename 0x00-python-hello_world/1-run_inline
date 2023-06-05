@@ -1,0 +1,11 @@
+#!/bin/bash
+
+pycode=$PYCODE
+
+tmpfile=$(mktemp)
+
+echo "$pycode" > "$tmpfile"
+
+python3 "$tmpfile"
+
+rm "$tmpfile"
